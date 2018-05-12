@@ -1,0 +1,9 @@
+仔细观察可以看出生成的动态代理类有以下特点:
+1.继承自 java.lang.reflect.Proxy，实现了 Rechargable,Vehicle 这两个ElectricCar实现的接口；
+
+2.类中的所有方法都是final 的；
+
+3.所有的方法功能的实现都统一调用了InvocationHandler的invoke()方法。
+调用代理对象中的方法时，代理对象会触发传入InvocationHandler中的invoke方法
+即：将执行功能的权利交给了InvocationHandler，而InvocationHandler通过method参数，来具体区分是什么方法，进而响应的处理
+一般情况下，InvocationHandler的invoke()方法体内，会调用method.invoke()方法来调用具体对昂的对应method

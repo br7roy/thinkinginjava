@@ -1,0 +1,19 @@
+group 'com.rust'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+//    mavenCentral()
+    mavenLocal()
+    maven{ url 'http://10.59.2.150:8081/nexus/content/groups/public/'}
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'asm', name: 'asm', version: '3.3.1'
+    compile group: 'org.javassist',name:'javassist',version:'3.21.0-GA'
+    compile group: 'cglib',name:'cglib',version:'2.2.2'
+}

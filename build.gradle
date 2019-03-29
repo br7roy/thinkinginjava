@@ -8,7 +8,7 @@ sourceCompatibility = 1.8
 repositories {
 //    mavenCentral()
     mavenLocal()
-    /*   maven{ url 'http://10.59.2.150:8081/nexus/content/groups/public/'}*/
+    maven{ url 'http://116.228.233.90:5881/nexus/content/groups/public/'}
 }
 
 dependencies {
